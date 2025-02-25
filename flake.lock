@@ -53,14 +53,8 @@
     },
     "nil": {
       "inputs": {
-        "flake-utils": [
-          "nvf",
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "nvf",
-          "nixpkgs"
-        ],
+        "flake-utils": ["nvf", "flake-utils"],
+        "nixpkgs": ["nvf", "nixpkgs"],
         "rust-overlay": "rust-overlay"
       },
       "locked": {
@@ -169,11 +163,7 @@
     },
     "rust-overlay": {
       "inputs": {
-        "nixpkgs": [
-          "nvf",
-          "nil",
-          "nixpkgs"
-        ]
+        "nixpkgs": ["nvf", "nil", "nixpkgs"]
       },
       "locked": {
         "lastModified": 1731983527,
