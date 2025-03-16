@@ -261,21 +261,14 @@
                     key = "<Leader>lsp";
                     mode = "n";
                     silent = false;
-                    action = ":w<CR>";
-                  }
-                  {
-                    # show error in float
-                    key = "<leader>d";
-                    mode = "n";
-                    silent = false;
-                    action = "vim.diagnostic.open_float";
+                    action = ":LspInfo<CR>";
                   }
                   {
                     # rename fuctions
                     key = "<leader>rn";
                     mode = "n";
                     silent = false;
-                    action = "vim.lsp.buf.rename";
+                    action = "<cmd>lua vim.lsp.buf.rename()<CR>";
                   }
                   # from primogen
                   {
