@@ -271,6 +271,14 @@
                     silent = false;
                     action = "<cmd>lua vim.lsp.buf.rename()<CR>";
                   }
+                  {
+                    # show error in float
+                    key = "<leader>d";
+                    mode = "n";
+                    silent = false;
+                    action = "<cmd>lua vim.diagnostic.open_float()<cr>";
+                  }
+
                   # from primogen
                   {
                     # move highlighted
