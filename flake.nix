@@ -222,6 +222,7 @@
                 };
 
                 keymaps = [
+                  # My custom hotkeys 🧶
                   {
                     # Save
                     key = "<C-s>";
@@ -232,7 +233,7 @@
                   {
                     # Move one right
                     key = "<C-l>";
-                    mode = "n";
+                    mode = "i";
                     silent = false;
                     action = "<Right>";
                   }
@@ -278,8 +279,15 @@
                     silent = false;
                     action = "<cmd>lua vim.diagnostic.open_float()<cr>";
                   }
+                  {
+                    # Reset file back to last save
+                    key = "<leader>E";
+                    mode = "n";
+                    silent = false;
+                    action = ":e!<cr>";
+                  }
 
-                  # from primogen
+                  # from primogen. 👾
                   {
                     # move highlighted
                     key = "<M-j>";
