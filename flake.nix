@@ -27,7 +27,10 @@
                 theme.style = "mocha";
 
                 # Leet code
-                utility.leetcode-nvim.enable = true;
+                utility.leetcode-nvim = {
+                  enable = true;
+                  setupOpts.lang = "typescript";
+                };
 
                 # Discord 🤣
                 presence = {
