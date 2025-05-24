@@ -88,7 +88,14 @@
                 #autocomplete
                 autocomplete = {
                   nvim-cmp.enable = false;
-                  blink-cmp.enable = true;
+                  blink-cmp = {
+                    enable = true;
+                    friendly-snippets.enable = true;
+                  };
+                };
+
+                navigation.harpoon = {
+                  enable = true;
                 };
 
                 autopairs.nvim-autopairs.enable = true;
@@ -118,14 +125,13 @@
 
                 # LSP
                 lsp = {
+                  enable = true;
                   formatOnSave = true;
                   lspsaga.enable = false;
-                  lsplines.enable = true; # virtual lines on top of the real line of code
                 };
 
                 # Languages
                 languages = {
-                  enableLSP = true;
                   enableTreesitter = true;
                   enableFormat = true;
 
@@ -178,6 +184,8 @@
                   gitsigns.enable = true;
                   gitsigns.codeActions.enable = false; # throws an annoying debug message
                 };
+
+                diagnostics.config.virtual_lines = true; # virtual lines on top of the real line of code
 
                 # Options
                 options = {
@@ -363,62 +371,62 @@
                     action = ":Neotree left<CR>";
                   }
                   # harpoon
-                  {
-                    # harpoon menu
-                    key = "<C-e>";
-                    mode = "n";
-                    silent = false;
-                    action = "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>";
-                  }
-                  {
-                    # add to harpoon
-                    key = "<leader>a";
-                    mode = "n";
-                    silent = false;
-                    action = "<cmd>lua require('harpoon.mark').add_file()<cr>";
-                  }
-                  {
-                    # harpoon switch
-                    key = "<C-j>";
-                    mode = "n";
-                    silent = false;
-                    action = "<cmd>lua require('harpoon.ui').nav_file(1)<cr>";
-                  }
-                  {
-                    #
-                    key = "<C-k>";
-                    mode = "n";
-                    silent = false;
-                    action = "<cmd>lua require('harpoon.ui').nav_file(2)<cr>";
-                  }
-                  {
-                    #
-                    key = "<C-l>";
-                    mode = "n";
-                    silent = false;
-                    action = "<cmd>lua require('harpoon.ui').nav_file(3)<cr>";
-                  }
-                  {
-                    #
-                    key = "<C-M-j>";
-                    mode = "n";
-                    silent = false;
-                    action = "<cmd>lua require('harpoon.ui').nav_file(4)<cr>";
-                  }
-                  {
-                    #
-                    key = "<C-M-k>";
-                    mode = "n";
-                    silent = false;
-                    action = "<cmd>lua require('harpoon.ui').nav_file(5)<cr>";
-                  }
-                  {
-                    #
-                    key = "<C-M-l>";
-                    mode = "n";
-                    silent = false;
-                    action = "<cmd>lua require('harpoon.ui').nav_file(6)<cr>";
-                  }
+                  # {
+                  #   # harpoon menu
+                  #   key = "<C-e>";
+                  #   mode = "n";
+                  #   silent = false;
+                  #   action = "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>";
+                  # }
+                  # {
+                  #   # add to harpoon
+                  #   key = "<leader>a";
+                  #   mode = "n";
+                  #   silent = false;
+                  #   action = "<cmd>lua require('harpoon.mark').add_file()<cr>";
+                  # }
+                  # {
+                  #   # harpoon switch
+                  #   key = "<C-j>";
+                  #   mode = "n";
+                  #   silent = false;
+                  #   action = "<cmd>lua require('harpoon.ui').nav_file(1)<cr>";
+                  # }
+                  # {
+                  #   #
+                  #   key = "<C-k>";
+                  #   mode = "n";
+                  #   silent = false;
+                  #   action = "<cmd>lua require('harpoon.ui').nav_file(2)<cr>";
+                  # }
+                  # {
+                  #   #
+                  #   key = "<C-l>";
+                  #   mode = "n";
+                  #   silent = false;
+                  #   action = "<cmd>lua require('harpoon.ui').nav_file(3)<cr>";
+                  # }
+                  # {
+                  #   #
+                  #   key = "<C-M-j>";
+                  #   mode = "n";
+                  #   silent = false;
+                  #   action = "<cmd>lua require('harpoon.ui').nav_file(4)<cr>";
+                  # }
+                  # {
+                  #   #
+                  #   key = "<C-M-k>";
+                  #   mode = "n";
+                  #   silent = false;
+                  #   action = "<cmd>lua require('harpoon.ui').nav_file(5)<cr>";
+                  # }
+                  # {
+                  #   #
+                  #   key = "<C-M-l>";
+                  #   mode = "n";
+                  #   silent = false;
+                  #   action = "<cmd>lua require('harpoon.ui').nav_file(6)<cr>";
+                  # }
                   {
                     # undotree
                     key = "<F5>";
@@ -428,13 +436,8 @@
                   }
                 ];
                 extraPlugins = with pkgs.vimPlugins; {
-                  harpoon = {
-                    package = harpoon;
-                    setup = "require('harpoon').setup {}";
-                  };
                   undotree = {
                     package = undotree;
-                    after = ["harpoon"];
                   };
                 };
               };
