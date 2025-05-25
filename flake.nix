@@ -22,9 +22,11 @@
                 globals.mapleader = " ";
 
                 # theme
-                theme.enable = true;
-                theme.name = "catppuccin";
-                theme.style = "mocha";
+                theme = {
+                  enable = true;
+                  name = "catppuccin";
+                  style = "mocha";
+                };
 
                 # Leet code
                 utility.leetcode-nvim = {
@@ -123,6 +125,18 @@
                   };
                 };
 
+                # diagnostics
+                diagnostics = {
+                  enable = true;
+                  config = {
+                    signs = true;
+                    underline = true;
+                    update_in_insert = false;
+                    virtual_lines = true; # virtual lines on top of the real line of code
+                    virtual_text = false; # virtual_lines replaced need for this
+                  };
+                };
+
                 # LSP
                 lsp = {
                   enable = true;
@@ -134,6 +148,7 @@
                 languages = {
                   enableTreesitter = true;
                   enableFormat = true;
+                  enableExtraDiagnostics = true;
 
                   nix.enable = true;
                   ts.enable = true;
@@ -184,8 +199,6 @@
                   gitsigns.enable = true;
                   gitsigns.codeActions.enable = false; # throws an annoying debug message
                 };
-
-                diagnostics.config.virtual_lines = true; # virtual lines on top of the real line of code
 
                 # Options
                 options = {
@@ -370,7 +383,7 @@
                     silent = true;
                     action = ":Neotree left<CR>";
                   }
-                  # harpoon
+                  # NOTE: These hotkeys for harpoon V1. Using the V2 defaults for now.
                   # {
                   #   # harpoon menu
                   #   key = "<C-e>";
