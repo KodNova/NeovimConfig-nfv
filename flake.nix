@@ -92,6 +92,7 @@
                   nvim-cmp.enable = false;
                   blink-cmp = {
                     enable = true;
+                    mappings.close = "<A-Tab>";
                     friendly-snippets.enable = true;
                   };
                 };
