@@ -97,6 +97,22 @@
                   };
                 };
 
+                # AI Assistant
+                assistant = {
+                  codecompanion-nvim = {
+                    enable = true;
+                    setupOpts.strategies = {
+                      chat.adapter = "gemini";
+                      inline.adapter = "copilot";
+                    };
+                  };
+                  chatgpt.enable = false;
+                  copilot = {
+                    enable = true;
+                    cmp.enable = true;
+                  };
+                };
+
                 navigation.harpoon = {
                   enable = true;
                 };
@@ -165,15 +181,6 @@
                   rust = {
                     enable = false;
                     crates.enable = false;
-                  };
-                };
-
-                # Assistant
-                assistant = {
-                  chatgpt.enable = false;
-                  copilot = {
-                    enable = false;
-                    cmp.enable = false;
                   };
                 };
 
