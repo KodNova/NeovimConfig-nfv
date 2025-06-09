@@ -103,7 +103,7 @@
                     enable = true;
                     setupOpts.strategies = {
                       chat.adapter = "gemini";
-                      inline.adapter = "copilot";
+                      inline.adapter = "gemini";
                     };
                   };
                   chatgpt.enable = false;
