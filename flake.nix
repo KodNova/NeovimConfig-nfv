@@ -154,10 +154,36 @@
                   };
                 };
 
+                formatter.conform-nvim = {
+                  enable = true;
+                  setupOpts = {
+                    formatters_by_ft = {
+                      javascript = ["prettier"];
+                      typescript = ["prettier"];
+                      javascriptreact = ["prettier"];
+                      typescriptreact = ["prettier"];
+                      json = ["prettier"];
+                      html = ["prettier"];
+                      css = ["prettier"];
+                      scss = ["prettier"];
+                      less = ["prettier"];
+                      yaml = ["prettier"];
+                      markdown = ["prettier"];
+                      graphql = ["prettier"];
+                      vue = ["prettier"];
+                      svelte = ["prettier"];
+                    };
+                    format_on_save = {
+                      timeout_ms = 500;
+                      lsp_fallback = true; # from reading conform github I suspect this might need to be  lsp_format = "fallback",
+                    };
+                  };
+                };
+
                 # LSP
                 lsp = {
                   enable = true;
-                  formatOnSave = true;
+                  formatOnSave = false; # setting to false for now. trying to get conform.nvim to format then fallback to lsp if it can't.
                   lspsaga.enable = false;
                 };
 
