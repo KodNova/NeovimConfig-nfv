@@ -174,8 +174,8 @@
                       svelte = ["prettier"];
                     };
                     format_on_save = {
-                      timeout_ms = 500;
-                      lsp_fallback = true; # from reading conform github I suspect this might need to be  lsp_format = "fallback",
+                      timeout_ms = 10000;
+                      lsp_fallback = "fallback"; # from reading conform github I suspect this might need to be  lsp_format = "fallback",
                     };
                   };
                 };
