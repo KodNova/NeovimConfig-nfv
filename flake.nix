@@ -205,8 +205,8 @@
                   markdown.enable = true;
                   zig.enable = false;
                   rust = {
-                    enable = false;
-                    crates.enable = false;
+                    enable = true;
+                    crates.enable = true;
                   };
                 };
 
