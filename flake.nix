@@ -208,6 +208,10 @@
                     enable = true;
                     crates.enable = true;
                   };
+		  # temp scala and java support for FP book
+		  scala.enable = true;
+		  java.enable = true;
+
                 };
 
                 filetree.neo-tree = {
@@ -417,63 +421,6 @@
                     silent = true;
                     action = ":Neotree left<CR>";
                   }
-                  # NOTE: These hotkeys for harpoon V1. Using the V2 defaults for now.
-                  # {
-                  #   # harpoon menu
-                  #   key = "<C-e>";
-                  #   mode = "n";
-                  #   silent = false;
-                  #   action = "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>";
-                  # }
-                  # {
-                  #   # add to harpoon
-                  #   key = "<leader>a";
-                  #   mode = "n";
-                  #   silent = false;
-                  #   action = "<cmd>lua require('harpoon.mark').add_file()<cr>";
-                  # }
-                  # {
-                  #   # harpoon switch
-                  #   key = "<C-j>";
-                  #   mode = "n";
-                  #   silent = false;
-                  #   action = "<cmd>lua require('harpoon.ui').nav_file(1)<cr>";
-                  # }
-                  # {
-                  #   #
-                  #   key = "<C-k>";
-                  #   mode = "n";
-                  #   silent = false;
-                  #   action = "<cmd>lua require('harpoon.ui').nav_file(2)<cr>";
-                  # }
-                  # {
-                  #   #
-                  #   key = "<C-l>";
-                  #   mode = "n";
-                  #   silent = false;
-                  #   action = "<cmd>lua require('harpoon.ui').nav_file(3)<cr>";
-                  # }
-                  # {
-                  #   #
-                  #   key = "<C-M-j>";
-                  #   mode = "n";
-                  #   silent = false;
-                  #   action = "<cmd>lua require('harpoon.ui').nav_file(4)<cr>";
-                  # }
-                  # {
-                  #   #
-                  #   key = "<C-M-k>";
-                  #   mode = "n";
-                  #   silent = false;
-                  #   action = "<cmd>lua require('harpoon.ui').nav_file(5)<cr>";
-                  # }
-                  # {
-                  #   #
-                  #   key = "<C-M-l>";
-                  #   mode = "n";
-                  #   silent = false;
-                  #   action = "<cmd>lua require('harpoon.ui').nav_file(6)<cr>";
-                  # }
                   {
                     # undotree
                     key = "<F5>";
