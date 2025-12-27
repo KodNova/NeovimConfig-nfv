@@ -84,7 +84,7 @@
 
                 spellcheck = {
                   enable = true;
-                  programmingWordlist.enable = true;
+                  programmingWordlist.enable = false;
                 };
 
                 #autocomplete
@@ -200,18 +200,18 @@
                   css.enable = true;
                   sql.enable = true;
                   bash.enable = true;
-                  go.enable = true;
+                  go.enable = false;
                   lua.enable = true;
                   markdown.enable = true;
                   zig.enable = false;
+                  haskell.enable = false;
                   rust = {
                     enable = true;
-                    crates.enable = true;
+                    extensions.crates-nvim.enable = true;
                   };
-		  # temp scala and java support for FP book
-		  scala.enable = true;
-		  java.enable = true;
-
+                  # temp scala and java support for FP book
+                  scala.enable = true;
+                  java.enable = true;
                 };
 
                 filetree.neo-tree = {
