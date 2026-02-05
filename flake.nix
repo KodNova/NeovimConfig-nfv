@@ -204,14 +204,14 @@
                   lua.enable = true;
                   markdown.enable = true;
                   zig.enable = false;
-                  haskell.enable = false;
+                  haskell.enable = true;
                   rust = {
                     enable = true;
                     extensions.crates-nvim.enable = true;
                   };
                   # temp scala and java support for FP book
                   scala.enable = true;
-                  java.enable = true;
+                  java.enable = false;
                 };
 
                 filetree.neo-tree = {
