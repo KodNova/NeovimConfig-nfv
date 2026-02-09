@@ -193,7 +193,13 @@
                   enableFormat = true;
                   enableExtraDiagnostics = true;
 
-                  nix.enable = true;
+                  nix = {
+                    enable = true;
+                    lsp = {
+                      enable = true;
+                      servers = ["nixd"];
+                    };
+                  };
                   ts.enable = true;
                   html.enable = true;
                   tailwind.enable = true;
