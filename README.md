@@ -1,2 +1,2 @@
-# NeovimConfig-nfv
-My neovim configuration for Nix using nvf.
+# Neovim-nvf
+My personal neovim configuration for Nix using nvf.
