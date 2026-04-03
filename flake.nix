@@ -1,5 +1,5 @@
 {
-  description = "My neovim configuration for Nix using nvf";
+  description = "My neovim configuration for Nix";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -100,7 +100,7 @@
                 # AI Assistant
                 assistant = {
                   codecompanion-nvim = {
-                    enable = true;
+                    enable = false;
                     setupOpts.strategies = {
                       chat.adapter = "gemini";
                       inline.adapter = "gemini";
@@ -175,7 +175,7 @@
                     };
                     format_on_save = {
                       timeout_ms = 10000;
-                      lsp_fallback = "fallback"; # from reading conform github I suspect this might need to be  lsp_format = "fallback",
+                      lsp_fallback = "fallback";
                     };
                   };
                 };
@@ -183,7 +183,7 @@
                 # LSP
                 lsp = {
                   enable = true;
-                  formatOnSave = false; # setting to false for now. trying to get conform.nvim to format then fallback to lsp if it can't.
+                  formatOnSave = false; # replaced by conform.nvim
                   lspsaga.enable = false;
                 };
 
@@ -215,8 +215,7 @@
                     enable = true;
                     extensions.crates-nvim.enable = true;
                   };
-                  # temp scala and java support for FP book
-                  scala.enable = true;
+                  scala.enable = false;
                   java.enable = false;
                 };
 
